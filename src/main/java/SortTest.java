@@ -6,6 +6,8 @@ import java.util.*;
 
 
 public class SortTest {
+
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
@@ -21,6 +23,23 @@ public class SortTest {
 
             testCases--;
         }
+
+        Collections.sort(studentList, new Comparator<Student2>() {
+            public int compare(Student2 o1, Student2 o2) {
+                return o1.getCgpa() > o2.getCgpa() ? -1 : (o1.getId() < o2.getId()) ? 1 : 0;
+                // (a < b) ? a : b;
+            }
+        });
+
+        Collections.sort(studentList,
+                new Comparator<Student2>() {
+                    public int compare(Student2 o1, Student2 o2) {
+                        if (o1.getCgpa() == o2.getCgpa()) {
+                            return o1.getFname().compareTo(o2.getFname());
+                        }
+                        return 0;
+                    }
+                });
 
         for (Student2 st : studentList) {
             System.out.println(st.getFname());
