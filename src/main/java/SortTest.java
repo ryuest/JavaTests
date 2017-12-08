@@ -26,6 +26,10 @@ public class SortTest {
 
         Collections.sort(studentList, new Comparator<Student2>() {
             public int compare(Student2 o1, Student2 o2) {
+                System.out.println("1: "+ (o1.getCgpa() > o2.getCgpa()));
+                System.out.println("2: "+ (o1.getId() < o2.getId()));
+                System.out.println("3: "+ (o1.getCgpa() > o2.getCgpa() ? -1 : (o1.getId() < o2.getId()) ? 1 : 0));
+                System.out.println();
                 return o1.getCgpa() > o2.getCgpa() ? -1 : (o1.getId() < o2.getId()) ? 1 : 0;
                 // (a < b) ? a : b;
             }

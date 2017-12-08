@@ -4,21 +4,10 @@
 public class PrintOutTest {
 
     public static void main(String[] args) {
-        // o1.getCgpa() > o2.getCgpa() ? -1 : (o1.getId() < o2.getId()) ? 1 : 0;
 
-        int a = 2;
-        int b = 1;
-        int max = 0;
+        String max = "Hello";
 
-        if (a > b) {
-            max = a;
-        }
-        else {
-            max = b;
-        }
-
-        max = (a < b) ? a : b;
-
-        System.out.println(max);
+        System.out.println(max.substring(0, 1) + " " +
+                max.substring(0) + " " + max.substring(2));
     }
 }
