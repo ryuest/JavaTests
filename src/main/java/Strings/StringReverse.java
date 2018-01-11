@@ -19,13 +19,9 @@ public class StringReverse {
         boolean isPalindrome = true;
 
         for (int i = 0; i < (int) word.length() / 2; i++) {
-            System.out.println("1 " + i);
-            System.out.println("2 " + word.charAt(i));
-            System.out.println("3 " + word.charAt(word.length() - 1 - i));
             if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
                 isPalindrome = false;
                 break;
-
             }
         }
         return isPalindrome;

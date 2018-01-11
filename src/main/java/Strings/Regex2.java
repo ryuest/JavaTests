@@ -17,8 +17,8 @@ public class Regex2 {
     Reya is is the the best player in eye eye game
     in inthe
     Hello hello Ab aB
-    Sample Output
 
+    Sample Output
     Goodbye bye world
     Sam went to his business
     Reya is the best player in eye game
@@ -36,8 +36,7 @@ public class Regex2 {
             String input = in.nextLine();
 
             Matcher m = p.matcher(input);
-            System.out.println("m " + m);
-            System.out.println(input.replaceAll(regex, "ZZZ"));
+          //  System.out.println(input.replaceAll(regex, "ZZZ"));
 
             // Check for subsequences of input that match the compiled pattern
             while (m.find()) {

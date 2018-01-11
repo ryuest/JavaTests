@@ -24,6 +24,8 @@ public class PrintOutTest {
     public static void main(String[] args) {
 
         String max = "Hello";
+        System.out.println(max.substring(1));
+        System.out.println(max.concat(" World "));
         System.out.println(Math.pow(4, 4));
 
 
